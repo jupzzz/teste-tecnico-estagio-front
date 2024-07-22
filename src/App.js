@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import menu from '../src/assets/data/menu.json'
 
 function App() {
+  console.log(menu);
   return (
     <div className="App">
       <header className="App-header">
