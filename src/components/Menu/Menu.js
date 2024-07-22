@@ -34,6 +34,7 @@ const Menu = ({ items, activeItem, setActiveItem }) => {
   
     return (
       <div className="menu-container">
+        <div className="logo"/>
         <Menu items={data} activeItem={activeItem} setActiveItem={setActiveItem} />
       </div>
     );
