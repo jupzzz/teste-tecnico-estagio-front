@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 import menu from '../src/assets/data/menu.json'
 
+const Menu = ({ items }) => {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>
+          {item.nome}
+          {item.subcategorias && item.subcategorias.length > 0 && (
+            <Menu items={item.subcategorias} />
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 function App() {
-  console.log(menu);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Menu</h1>
+        <Menu items={menu} />
       </header>
     </div>
   );
