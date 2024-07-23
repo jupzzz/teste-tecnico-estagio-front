@@ -208,12 +208,12 @@ ul.menu > li.active > ul.menu li > ul.menu li {
         align-items: center;
         top: 0;
         left: 0;
-        background-color: white;
         z-index: 1000;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         padding: 0px;
         border-radius: 8px;
         height: 55px;
+        background-color: #f8f9fa;
+        border-top: 1px solid #e9ecef;
     }
 
 
@@ -223,13 +223,13 @@ ul.menu > li.active > ul.menu li > ul.menu li {
         padding: 0;
         margin: 0;
         list-style-type: none;
-        background-color: white;
         width: 100%;
         color: black;
         font-size: 18px;
         border-radius: 8px;
         font-family: "Jost", sans-serif;
         flex-direction: column;
+        background-color: #f8f9fa;
     }
 
     /* Item da lista do menu */
@@ -265,7 +265,7 @@ ul.menu > li.active > ul.menu li > ul.menu li {
     /* Estiliza itens do menu quando passa o mouse ou quando estiver ativo */
     .menu li:hover,
     .menu li.active {
-        background-color: white;
+        background-color: #f8f9fa;
         border-radius: 8px;
     }
 

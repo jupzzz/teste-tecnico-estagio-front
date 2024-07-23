@@ -28,3 +28,34 @@
   .footer a:hover {
     text-decoration: underline; /* Underline on hover */
   }
+
+  .footer .icons {
+    margin-top: 10px;
+  }
+  
+  .footer .icons a {
+    color: #61dafb; /* Bootstrap primary color for links */
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .footer .icons a:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+
+
+
+
+  @media (max-width: 768px) {
+
+  .footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 20px 0px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+}
