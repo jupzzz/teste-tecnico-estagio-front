@@ -4,11 +4,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const AboutMe = () => {
   const content = [
-    { name: 'Júlia Penz', 
-      description: 'Im currently studying Systems Analysis and Development in my last semester at university, graduation in June.', 
+    {
+      name: 'Júlia Penz',
+      description: 'Im currently studying Systems Analysis and Development in my last semester at university, graduation in June.',
       github: 'https://github.com/jupzzz',
       linkedin: 'https://www.linkedin.com/in/juliapenz/'
-     },
+    },
   ];
 
   return (

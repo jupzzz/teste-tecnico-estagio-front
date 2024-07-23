@@ -11,7 +11,7 @@ const Menu = ({ items, activeItem, setActiveItem }) => {
 
   return (
     <ul className="menu"> {/* Lista nao ordenada para exibir os itens */}
-    {/* Mapeamento do array para criar a lista de itens */}
+      {/* Mapeamento do array para criar a lista de itens */}
       {items.map((item, index) => (
         <li
           key={index} // Propriedade que identifica cada item de forma unica
@@ -21,7 +21,7 @@ const Menu = ({ items, activeItem, setActiveItem }) => {
           {item.nome} {/* Exibe o nome do item */}
           {/* verifica se o item tem subcategoria e se tem tamanho maior que 0 */}
           {item.subcategorias && item.subcategorias.length > 0 && (
-            <Menu 
+            <Menu
               items={item.subcategorias} // Passa a subcategoria para o nivel seguinte do menu
               activeItem={activeItem} // Passa o item pra controle
               setActiveItem={setActiveItem} // Atualiza o item
@@ -43,7 +43,7 @@ const MenuContainer = () => {
   };
 
   return (
-    
+
     <div className="menu-container">
       <div className="logo" />
       <div className="topnav">
@@ -54,7 +54,7 @@ const MenuContainer = () => {
           <Menu items={data} activeItem={activeItem} setActiveItem={setActiveItem} />
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

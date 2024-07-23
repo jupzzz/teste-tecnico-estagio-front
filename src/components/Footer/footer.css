@@ -1,54 +1,58 @@
 .footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-  
-  .footer h2 {
-    font-size: 24px;
-    color: #343a40; /* Dark gray color for headings */
-    margin: 10px 0; /* Space around headings */
-  }
-  
-  .footer p {
-    font-size: 16px;
-    color: #6c757d; /* Medium gray color for text */
-    margin: 5px 0; /* Space around paragraphs */
-  }
-  
-  .footer a {
-    color: #007bff; /* Bootstrap primary color for links */
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
 
-  .footer .icons {
-    margin-top: 10px;
-  }
-  
-  .footer .icons a {
-    color: #61dafb; /* Bootstrap primary color for links */
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .footer .icons a:hover {
-    color: #0056b3; /* Darker blue on hover */
-  }
+.footer h2 {
+  font-size: 24px;
+  color: #343a40;
+  /* Dark gray color for headings */
+  margin: 10px 0;
+  /* Space around headings */
+}
 
+.footer p {
+  font-size: 16px;
+  color: #6c757d;
+  /* Medium gray color for text */
+  margin: 5px 0;
+  /* Space around paragraphs */
+}
 
+.footer a {
+  color: #007bff;
+  /* Bootstrap primary color for links */
+  text-decoration: none;
+}
 
+.footer a:hover {
+  text-decoration: underline;
+  /* Underline on hover */
+}
 
-  @media (max-width: 768px) {
+.footer .icons {
+  margin-top: 10px;
+}
 
+.footer .icons a {
+  color: #61dafb;
+  /* Bootstrap primary color for links */
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer .icons a:hover {
+  color: #0056b3;
+  /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
   .footer {
     background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
@@ -57,5 +61,5 @@
     position: relative;
     bottom: 0;
     width: 100%;
-}
+  }
 }
