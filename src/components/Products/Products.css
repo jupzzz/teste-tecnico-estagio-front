@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.products {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;
+    margin-top: 150px;
+    gap: 30px; 
+    padding: 0 10px; 
+}
+
+/* Cada produto */
+.product {
+    position: relative;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(25% - 20px); /* Define a largura do bloco, considerando o espaçamento */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out; /* Transiçao para a sombra */
+    overflow: hidden; /* Faz com que o conteúdo que ultrapassa o bloco seja oculto */
+    display: flex;
+}
+
+/* Imagem do produto */
+.product-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição para a transformação */
+    object-fit: cover;  /* Faz com que a imagem cubra completamente o bloco sem ficar distorcida */
+}
+
+/* Efeito de zoom quando passa o mouse na imagem */
+.product:hover .product-image {
+    transform: scale(1.05); /* aumenta o tamanho em 5% */
+}
+
+/* Informações do produto */
+.product-info {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente a area de informações */
+    text-align: center;
+    background-color: #868f8f3c;
+    color: black;
+    border-radius: 8px;
+    opacity: 0; /* No inicio, torna a área de informações invisível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição na visibilidade */
+    width: calc(100% - 20px); /* Define a largura da área das informações, considerando o preenchimento */
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+}
+
+/* Area de informações fica visível quando passa o mouse sobre o produto */
+.product:hover .product-info {
+    opacity: 1;
+}
+
+/* Tentei deixar responsivo, mas não deu */
+@media (max-width: 1024px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-height: 500px) {
+    .product {
+        max-height: 300px;
+    }
+}
