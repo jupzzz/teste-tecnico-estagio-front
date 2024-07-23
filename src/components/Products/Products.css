@@ -2,11 +2,11 @@
 
 .products {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: stretch;
-    margin-top: 150px;
-    gap: 30px; 
-    padding: 0 10px; 
+    margin-top: 80px;
+    gap: 30px;
+    padding: 0 10px;
 }
 
 /* Cada produto */
@@ -69,6 +69,15 @@
 @media (max-width: 768px) {
     .product {
         width: calc(100% - 20px);
+        margin-bottom: 15px;
+    }
+    .products {
+        display: block;
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 30px;
+        gap: 30px;
+        padding: 0 10px;
     }
 }
 

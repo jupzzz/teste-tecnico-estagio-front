@@ -1,33 +1,22 @@
-/* Importa fonte */
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); 
 
 .logo {
     width: 50px;
     height: 50px;
-    float: left;
     position: absolute;
     background-image: url('../../../public/logo192.png');
     background-size: cover;
     background-repeat: no-repeat;
-    left: 20px;
     border-radius: 50%;
-    margin-top: 2px;
+    top: 8px;
 }
 
-/* Conteineir do menu */
+/* Conteiner do menu */
 .menu-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 1000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    padding-left: 90px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 8px;
+    border-radius: 10px;
+    padding: 5px 210px;
+    background-color: #f8f9fa;
 }
 
 /* Area de info do menu */
@@ -46,28 +35,28 @@
 
 /* Lista dos itens do menu */
 .menu {
+    margin: 0px 0px 0px 50px;
     display: flex;
-    padding: 0;
-    margin: 0;
     list-style-type: none;
-    background-color: white;
+    background-color: #f8f9fa;
     width: 100%;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 8px;
     font-family: "Jost", sans-serif;
 }
 
 /* Item da lista do menu */
-.menu > li {
+.menu>li {
     position: relative;
     padding: 15px 60px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transiçao para a cor de fundo */
+    transition: background-color 0.3s;
+    margin-right: 5px;
 }
 
 /* Remove a borda direita do ultimo item do menu */
-.menu > li:last-child {
+.menu>li:last-child {
     border-right: none;
 }
 
@@ -79,74 +68,234 @@
     left: 0;
     width: 184px;
     background-color: white;
-    box-shadow: 0px 8px 16px rgba(6, 2, 2, 0.556);
-    z-index: 1000;
     border-radius: 8px;
+    text-align: center;
+    padding: 0px;
+    font-weight: normal;
+    z-index: 1;
+}
+
+.menu li ul li ul li {
+    color: black;
+    font-weight: 300;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 5px rgba(6, 2, 2, 0.556);
+    border: none;
+    background: none;
 }
 
 /* Subcategoria quando passa o mouse sobre o item no menu */
-.menu li:hover > ul {
-    display: block; /* O menu de subcategoria fica visivel */
+.menu li:hover>ul {
+    display: block;
+    /* O menu de subcategoria fica visivel */
+}
+
+a.icon {
+    display: none;
 }
 
 /* Itens da subcategoria */
 .menu li ul li {
     padding: 10px 15px;
     position: relative;
-    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
-}
-
-/* Subcategoria dentro da subcategoria */
-.menu li ul li ul {
-    left: 100%;
-    top: 0;
+    transition: background-color 0.3s;
+    color: black;
+    font-weight: 300;
     border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 5px rgba(6, 2, 2, 0.556);
+    border: none;
 }
 
-/* Deixa a subcategoria dentro da subcategoria oculta
+/* Deixa a subcategoria dentro da subcategoria oculta */
 .menu li ul li ul {
     display: none;
-    left: 100%;
-    top: 0;
     background-color: white;
-    box-shadow: 0px 8px 16px rgba(6, 2, 2, 0.556);
-    z-index: 1000;
     border-radius: 8px;
+    left: 130px;
+    top: 0px;
+    z-index: 3;
 }
 
 /* Exibe a subcategoria quando passa o mouse sobre a categoria pai */
-.menu li ul li:hover > ul {
-    display: block; 
+.menu li ul li:hover>ul {
+    display: block;
 }
 
 /* Estiliza itens do menu quando passa o mouse ou quando estiver ativo */
-.menu li:hover,
-.menu li.active {
-    background-color: #868f8f3c;
-    border-radius: 8px;
+.menu li:hover, .menu li.active {
+    font-weight: bold;
 }
 
-/* Tentei deixar responsivo, mas não deu */
+.menu-mobile.open {
+    display: block;
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+}
+
+
 @media (max-width: 768px) {
+
+    /* Menu Mobile */
+.menu-mobile {
+    display: none;
+}
+
+ul.menu > li.active > ul.menu li > ul.menu li {
+    margin: 15px 0px;
+}
+
+    ul.menu > li.active > ul.menu li > ul.menu li:hover{
+        background: white;
+        color: black;
+        font-weight: bold;
+    }
+
     .menu {
-        flex-direction: column;
-    }
-
-    .menu > li {
-        padding: 10px;
-    }
-
-    .menu li ul {
+        display: block;
         width: 100%;
     }
 
-    .menu li ul li ul {
-        left: 100%;
+    .logo {
+        width: 50px;
+        height: 50px;
+        float: left;
+        position: absolute;
+        background-image: url('../../../public/logo192.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 15px;
+        margin-top: 2px;
+        z-index: 2;
+        top: 3px;
     }
-}
 
-@media (max-width: 480px) {
-    .menu-info {
-        font-size: 12px;
+    /* Conteiner do menu */
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 0px;
+        border-radius: 8px;
+        height: 55px;
     }
-}
+
+
+    /* Lista dos itens do menu */
+    .menu {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        background-color: white;
+        width: 100%;
+        color: black;
+        font-size: 18px;
+        border-radius: 8px;
+        font-family: "Jost", sans-serif;
+        flex-direction: column;
+    }
+
+    /* Item da lista do menu */
+    .menu>li {
+        position: relative;
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: normal;
+    }
+
+    /* Subcategoria */
+    .menu li ul {
+        position: relative;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(6, 2, 2, 0.556);
+        border-radius: 8px;
+    }
+
+    /* Subcategoria quando passa o mouse sobre o item no menu */
+    .menu li:hover>ul {
+        display: block;
+        box-shadow: none;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    /* Itens da subcategoria */
+    .menu li ul li { padding: 10px 15px; margin: 15px 0px; }
+
+    /* Estiliza itens do menu quando passa o mouse ou quando estiver ativo */
+    .menu li:hover,
+    .menu li.active {
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    .topnav {
+        float: left;
+        width: 100%;
+        z-index: 1;
+        box-shadow: none;
+        border-radius: 0px 0px 8px 8px;
+    }
+    
+    .topnav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 15px;
+        background-color: #61dafb;
+        border-radius: 8px;
+    }
+    
+    .topnav a.icon {
+        position: absolute;
+        right: 5px;
+        top: 7px;
+        z-index: 2;
+        display: block;
+    }
+    
+    .topnav a:hover {
+        background-color: #55c2df;
+        color: white;
+    }
+} 

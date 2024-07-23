@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import MenuContainer from './components/Menu/Menu';
 import Products from './components/Products/Products';
+import Footer from './components/Footer/footer'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <div className="header-content"></div>
       </header>
       <Products />
+      <Footer />
     </div>
   );
 }

@@ -36,15 +36,25 @@ const Menu = ({ items, activeItem, setActiveItem }) => {
 // Componente que serve para gerenciar o item e renderizar o menu
 const MenuContainer = () => {
   const [activeItem, setActiveItem] = useState(''); // Armazena o item
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    <div className="menu-container"> {/* Conteiner para todo o menu e o logo */}
-      <div className="logo" /> 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-      <Menu items={data} activeItem={activeItem} setActiveItem={setActiveItem} /> { /* Renderiza o componente com o JSON */}
-    </div>
+    
+    <div className="menu-container">
+      <div className="logo" />
+      <div className="topnav">
+        <a href="javascript:void(0);" className="icon" onClick={toggleMobileMenu}>
+          <i className="fa fa-bars"></i>
+        </a>
+        <div id="myLinks" className={`menu-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
+          <Menu items={data} activeItem={activeItem} setActiveItem={setActiveItem} />
+        </div>
+      </div>
+      </div>
   );
 };
 
