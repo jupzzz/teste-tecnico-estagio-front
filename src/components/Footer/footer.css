@@ -12,12 +12,16 @@
   font-size: 24px;
   color: #343a40;
   margin: 10px 0;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
 }
 
 .footer p {
   font-size: 16px;
   color: #6c757d;
   margin: 5px 0;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
 }
 
 .footer a {
