@@ -86,8 +86,7 @@
 
 /* Subcategoria quando passa o mouse sobre o item no menu */
 .menu li:hover>ul {
-    display: block;
-    /* O menu de subcategoria fica visivel */
+    display: block; /* O menu de subcategoria fica visivel */
 }
 
 a.icon {
@@ -211,7 +210,6 @@ a.icon {
         background-color: #f8f9fa;
         border-top: 1px solid #e9ecef;
     }
-
 
     /* Lista dos itens do menu */
     .menu {
