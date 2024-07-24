@@ -3,10 +3,11 @@ import './footer.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const AboutMe = () => {
+  // Define lista de informações
   const content = [
     {
       name: 'Júlia Penz',
-      description: 'Im currently studying Systems Analysis and Development in my last semester at university, graduation in June.',
+      description: 'Systems Analysis and Development Degree',
       github: 'https://github.com/jupzzz',
       linkedin: 'https://www.linkedin.com/in/juliapenz/'
     },
@@ -14,11 +15,13 @@ const AboutMe = () => {
 
   return (
     <div className="footer">
+      {/* Mapeamento do array de conteúdo para criar blocos de conteúdo */}
       {content.map((content, index) => (
-        <div key={`content-${index}`} className="content-block">
-          <h2>{content.name}</h2>
-          <p>{content.description}</p>
+        <div key={`content-${index}`} className="content-block"> {/* Propriedade que identifica cada bloco de conteúdo de forma única */}
+          <h2>{content.name}</h2> {/* Exibe o nome */}
+          <p>{content.description}</p> {/* Exibe a descrição */}
           <div className="icons">
+            { /* Links redes sociais e ícones */}
             <a href={content.linkedin} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>

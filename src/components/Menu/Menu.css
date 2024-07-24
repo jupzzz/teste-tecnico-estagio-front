@@ -165,8 +165,6 @@ a.icon {
 }
 
 @media (max-width: 768px) {
-
-    /* Menu Mobile */
     .menu-mobile {
         display: none;
     }

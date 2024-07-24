@@ -16,13 +16,10 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    width: calc(25% - 20px);
-    /* Define a largura do bloco, considerando o espaçamento */
+    width: calc(25% - 20px); /* Define a largura do bloco, considerando o espaçamento */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    /* Transiçao para a sombra */
-    overflow: hidden;
-    /* Faz com que o conteúdo que ultrapassa o bloco seja oculto */
+    transition: box-shadow 0.3s ease-in-out; /* Transiçao para a sombra */
+    overflow: hidden; /* Faz com que o conteúdo que ultrapassa o bloco seja oculto */
     display: flex;
 }
 
@@ -31,16 +28,13 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    /* Adiciona uma transição para a transformação */
-    object-fit: cover;
-    /* Faz com que a imagem cubra completamente o bloco sem ficar distorcida */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição para a transformação */
+    object-fit: cover; /* Faz com que a imagem cubra completamente o bloco sem ficar distorcida */
 }
 
 /* Efeito de zoom quando passa o mouse na imagem */
 .product:hover .product-image {
-    transform: scale(1.05);
-    /* aumenta o tamanho em 5% */
+    transform: scale(1.05); /* aumenta o tamanho em 5% */
 }
 
 /* Informações do produto */
@@ -48,18 +42,14 @@
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
-    /* Centraliza horizontalmente a area de informações */
+    transform: translateX(-50%); /* Centraliza horizontalmente a area de informações */
     text-align: center;
     background-color: #868f8f3c;
     color: black;
     border-radius: 8px;
-    opacity: 0;
-    /* No inicio, torna a área de informações invisível */
-    transition: opacity 0.3s ease-in-out;
-    /* Adiciona uma transição na visibilidade */
-    width: calc(100% - 20px);
-    /* Define a largura da área das informações, considerando o preenchimento */
+    opacity: 0; /* No inicio, torna a área de informações invisível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição na visibilidade */
+    width: calc(100% - 20px); /* Define a largura da área das informações, considerando o preenchimento */
     font-family: "Jost", sans-serif;
     font-size: 18px;
 }
@@ -69,7 +59,7 @@
     opacity: 1;
 }
 
-/* Tentei deixar responsivo, mas não deu */
+/* Area responsiva mobile */
 @media (max-width: 1024px) {
     .product {
         width: calc(50% - 20px);
